@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { User, Users, Building2, CheckCircle } from "lucide-react";
+import { User, Users, Building2, Globe, CheckCircle } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import type { LucideIcon } from "lucide-react";
 
@@ -53,7 +53,20 @@ const services: ServiceCard[] = [
       "service.enterprise.feature4",
     ],
     ctaKey: "service.enterprise.cta",
-    href: "/services/entreprise",
+    href: "/services/entreprise
+    {
+      icon: Globe,
+      titleKey: "service.digital.title",
+      descKey: "service.digital.desc",
+      features: [
+        "service.digital.feature1",
+        "service.digital.feature2",
+        "service.digital.feature3",
+        "service.digital.feature4",
+      ],
+      ctaKey: "service.digital.cta",
+      href: "#contact",
+    },",
   },
 ];
 
