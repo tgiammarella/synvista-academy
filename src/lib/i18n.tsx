@@ -134,6 +134,33 @@ export const t: Translations = {
   },
   "service.enterprise.cta": { fr: "En savoir plus", en: "Learn more" },
 
+  // Service 4 - Digital Services
+  "service.digital.title": {
+    fr: "Services num\u00e9riques",
+    en: "Digital Services",
+  },
+  "service.digital.desc": {
+    fr: "Cr\u00e9ation de sites web, d\u00e9veloppement d'applications, SEO et planification de m\u00e9dias sociaux. On le fait pour vous, ou on vous montre comment.",
+    en: "Website creation, app development, SEO, and social media planning. We do it for you, or we teach you how.",
+  },
+  "service.digital.feature1": {
+    fr: "Cr\u00e9ation de sites web professionnels",
+    en: "Professional website creation",
+  },
+  "service.digital.feature2": {
+    fr: "D\u00e9veloppement d'applications sur mesure",
+    en: "Custom app development",
+  },
+  "service.digital.feature3": {
+    fr: "Optimisation SEO et visibilit\u00e9 en ligne",
+    en: "SEO optimization and online visibility",
+  },
+  "service.digital.feature4": {
+    fr: "Strat\u00e9gie et planification m\u00e9dias sociaux",
+    en: "Social media strategy and planning",
+  },
+  "service.digital.cta": { fr: "En savoir plus", en: "Learn more" },
+
   // About section
   "about.tagline": { fr: "À propos", en: "About" },
   "about.title": {
