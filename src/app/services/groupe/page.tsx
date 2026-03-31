@@ -244,7 +244,7 @@ export default function GroupePage() {
               <motion.div
                 variants={fadeUp}
                 custom={0}
-                className="relative overflow-hidden rounded-3xl border border-white/10 bg-card p-12 lg:p-16"
+                className="relative overflow-hidden rounded-3xl border border-white/10 bg-card p-8 sm:p-12 lg:p-16"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full bg-primary/10 blur-[100px]" />
