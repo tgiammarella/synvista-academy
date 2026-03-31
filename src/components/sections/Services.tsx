@@ -131,7 +131,7 @@ export default function Services() {
             return (
               <motion.div
                 key={service.titleKey}
-                className="group relative flex flex-col rounded-2xl border border-slate-700/50 bg-[#1E293B] p-8 transition-all duration-500 hover:border-[#5A8A9A]/40 hover:shadow-xl hover:shadow-[#5A8A9A]/5"
+                className="group relative flex flex-col rounded-2xl border border-slate-700/50 bg-[#1E293B] p-6 sm:p-8 transition-all duration-500 hover:border-[#5A8A9A]/40 hover:shadow-xl hover:shadow-[#5A8A9A]/5"
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -189,4 +189,3 @@ export default function Services() {
     </section>
   );
 }
-
