@@ -168,7 +168,7 @@ export default function Hero() {
                 width={580}
                 height={580}
                 priority
-                className="relative z-10 h-auto w-full max-w-[580px] drop-shadow-2xl"
+                className="relative z-10 h-auto w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[580px] drop-shadow-2xl"
               />
             </div>
           </motion.div>
