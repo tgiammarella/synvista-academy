@@ -125,7 +125,7 @@ export default function Contact() {
             className="lg:col-span-3"
           >
             <div
-              className="rounded-2xl p-8 md:p-10"
+              className="rounded-2xl p-5 sm:p-8 md:p-10"
               style={{
                 background: "rgba(30, 41, 59, 0.5)",
                 border: "1px solid rgba(90, 138, 154, 0.12)",
