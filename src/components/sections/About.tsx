@@ -42,7 +42,7 @@ export default function About() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Two-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left column - Image */}
           <motion.div
             initial="hidden"
@@ -50,7 +50,7 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             custom={0}
             variants={fadeInUp}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end order-2 lg:order-1"
           >
             <div className="relative">
               {/* Glow effect behind image */}
@@ -73,7 +73,7 @@ export default function About() {
                     alt={tr("about.name")}
                     width={520}
                     height={620}
-                    className="w-full max-w-[520px] h-auto object-cover"
+                    className="w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[520px] h-auto object-cover mx-auto"
                     priority={false}
                   />
                 </div>
@@ -91,7 +91,7 @@ export default function About() {
           </motion.div>
 
           {/* Right column - Content */}
-          <div>
+          <div className="order-1 lg:order-2">
             <motion.p
               initial="hidden"
               whileInView="visible"
@@ -149,7 +149,7 @@ export default function About() {
               viewport={{ once: true, margin: "-100px" }}
               custom={6}
               variants={fadeInUp}
-              className="grid grid-cols-3 gap-4 mt-10"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10"
             >
               {stats.map((stat, i) => (
                 <motion.div
