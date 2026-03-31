@@ -265,7 +265,7 @@ export default function IndividuelPage() {
                         <div className="absolute top-10 left-[calc(50%+40px)] right-[-40px] hidden h-px bg-gradient-to-r from-primary/30 to-primary/5 lg:block" />
                       )}
 
-                      <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-card p-8 text-center transition-all duration-500 hover:border-primary/20 hover:bg-card-hover hover:shadow-lg hover:shadow-primary/5">
+                      <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-card p-6 sm:p-8 text-center transition-all duration-500 hover:border-primary/20 hover:bg-card-hover hover:shadow-lg hover:shadow-primary/5">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                         <div className="relative">
                           {/* Step number */}
@@ -307,7 +307,7 @@ export default function IndividuelPage() {
               <motion.div
                 variants={fadeUp}
                 custom={0}
-                className="relative overflow-hidden rounded-3xl border border-white/10 bg-card p-12 lg:p-16"
+                className="relative overflow-hidden rounded-3xl border border-white/10 bg-card p-8 sm:p-12 lg:p-16"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full bg-primary/10 blur-[100px]" />
