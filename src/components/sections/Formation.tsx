@@ -58,7 +58,7 @@ export default function Formation() {
                 className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
               >
                 <span className="gradient-text">
-                  {l("Programme Autonomie IA", "Programme Autonomie IA")}
+                  {l("Programme Autonomie IA", "AI Autonomy Program")}
                 </span>
               </motion.h2>
 
@@ -74,11 +74,11 @@ export default function Formation() {
                 )}
               </motion.p>
 
-              {/* Price + CTA */}
+              {/* CTA */}
               <motion.div
                 variants={fadeUp}
                 custom={3}
-                className="mt-10 flex flex-col items-center gap-5 sm:flex-row sm:justify-center"
+                className="mt-10"
               >
                 <Link
                   href="/autonomie-ia"
@@ -90,10 +90,6 @@ export default function Formation() {
                   <ArrowRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                 </Link>
-
-                <span className="text-sm font-medium text-white/40">
-                  {l("À partir de 142$/mois", "Starting at $142/month")}
-                </span>
               </motion.div>
             </div>
           </div>

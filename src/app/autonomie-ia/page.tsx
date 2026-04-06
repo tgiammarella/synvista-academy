@@ -91,21 +91,23 @@ function PricingButtons({ l }: { l: (fr: string, en: string) => string }) {
   return (
     <div className="flex flex-col gap-6 sm:flex-row sm:justify-center">
       {/* Full payment */}
-      <a
-        href="#"
-        className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-primary/30 bg-primary/10 px-8 py-6 text-center transition-all duration-300 hover:border-primary/50 hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5 sm:min-w-[260px]"
+      <button
+        type="button"
+        onClick={(e) => e.preventDefault()}
+        className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-primary/30 bg-primary/10 px-8 py-6 text-center transition-all duration-300 hover:border-primary/50 hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5 sm:min-w-[260px] cursor-default"
       >
         <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/5 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
         <span className="relative text-3xl font-bold text-white">397$</span>
         <span className="relative mt-2 text-sm font-semibold text-primary-light">
           {l("Payer en un versement", "Pay in full")}
         </span>
-      </a>
+      </button>
 
       {/* Payment plan */}
-      <a
-        href="#"
-        className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-white/10 bg-card px-8 py-6 text-center transition-all duration-300 hover:border-primary/30 hover:bg-card-hover hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 sm:min-w-[260px]"
+      <button
+        type="button"
+        onClick={(e) => e.preventDefault()}
+        className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-white/10 bg-card px-8 py-6 text-center transition-all duration-300 hover:border-primary/30 hover:bg-card-hover hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 sm:min-w-[260px] cursor-default"
       >
         <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/5 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
         <span className="relative text-3xl font-bold text-white">
@@ -114,7 +116,42 @@ function PricingButtons({ l }: { l: (fr: string, en: string) => string }) {
         <span className="relative mt-2 text-sm font-semibold text-white/60">
           {l("3 versements de 142$", "3 payments of 142$")}
         </span>
-      </a>
+      </button>
+    </div>
+  );
+}
+
+/* ─── Hero CTA with "coming soon" feedback ─── */
+
+function HeroCta({ l }: { l: (fr: string, en: string) => string }) {
+  const [showMessage, setShowMessage] = useState(false);
+
+  return (
+    <div className="flex flex-col items-center gap-3">
+      <button
+        type="button"
+        onClick={() => setShowMessage(true)}
+        className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all duration-300 hover:bg-primary-light hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
+      >
+        <span className="relative z-10">
+          {l("Je m'inscris", "Sign me up")}
+        </span>
+        <ArrowRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+      </button>
+      <AnimatePresence>
+        {showMessage && (
+          <motion.p
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="text-sm font-medium text-primary-light"
+          >
+            {l("Inscriptions bientôt ouvertes", "Registration opening soon")}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -155,7 +192,7 @@ export default function AutonomieIAPage() {
       icon: Target,
       title: l("Votre plan d'action personnel", "Your Personal Action Plan"),
       desc: l(
-        "Repartez avec une feuille de route concrète adaptée à VOTRE business",
+        "Repartez avec une feuille de route concrète adaptée à VOTRE entreprise",
         "Leave with a concrete roadmap adapted to YOUR business"
       ),
     },
@@ -209,7 +246,7 @@ export default function AutonomieIAPage() {
         "Is it live or pre-recorded?"
       ),
       a: l(
-        "En direct sur Zoom, avec accès aux replays si vous manquez une session.",
+        "En direct sur Zoom, avec accès aux rediffusions si vous manquez une session.",
         "Live on Zoom, with replay access if you miss a session."
       ),
     },
@@ -292,16 +329,7 @@ export default function AutonomieIAPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              <a
-                href="#pricing"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all duration-300 hover:bg-primary-light hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
-              >
-                <span className="relative z-10">
-                  {l("Je m'inscris", "Sign me up")}
-                </span>
-                <ArrowRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-              </a>
+              <HeroCta l={l} />
             </motion.div>
           </div>
 
@@ -573,9 +601,16 @@ export default function AutonomieIAPage() {
               <motion.div variants={fadeUp} custom={2} className="mt-14">
                 <PricingButtons l={l} />
 
-                <p className="mt-8 text-sm text-white/40">
+                <p className="mt-6 text-sm font-medium text-primary-light/70">
                   {l(
-                    "Vous préférez un accompagnement individuel\u00A0? J'offre aussi des sessions 1-on-1 à 97$/heure.",
+                    "Les inscriptions ouvrent bientôt. Restez à l'affût\u00A0!",
+                    "Registration opening soon. Stay tuned!"
+                  )}
+                </p>
+
+                <p className="mt-4 text-sm text-white/40">
+                  {l(
+                    "Vous préférez un accompagnement individuel\u00A0? J'offre aussi des sessions individuelles à 97$/heure.",
                     "Prefer individual coaching? I also offer 1-on-1 sessions at $97/hour."
                   )}
                 </p>
@@ -651,6 +686,13 @@ export default function AutonomieIAPage() {
 
                   <div className="mt-10">
                     <PricingButtons l={l} />
+
+                    <p className="mt-6 text-sm font-medium text-primary-light/70">
+                      {l(
+                        "Les inscriptions ouvrent bientôt. Restez à l'affût\u00A0!",
+                        "Registration opening soon. Stay tuned!"
+                      )}
+                    </p>
                   </div>
                 </div>
               </motion.div>
