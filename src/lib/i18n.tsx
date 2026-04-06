@@ -19,6 +19,7 @@ export const t: Translations = {
   "nav.individual": { fr: "Formation individuelle", en: "Individual Training" },
   "nav.group": { fr: "Formations de groupe", en: "Group Training" },
   "nav.enterprise": { fr: "Services entreprise", en: "Enterprise Services" },
+  "nav.formation": { fr: "Formation", en: "Training" },
 
   // Hero
   "hero.tagline": {
