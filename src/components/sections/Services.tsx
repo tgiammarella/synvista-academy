@@ -66,7 +66,7 @@ const services: ServiceCard[] = [
       "service.digital.feature4",
     ],
     ctaKey: "service.digital.cta",
-    href: "#contact",
+    href: "/services/numerique",
   },
 ];
 

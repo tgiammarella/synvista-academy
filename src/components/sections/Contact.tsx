@@ -209,6 +209,9 @@ export default function Contact() {
                       <option value="enterprise">
                         {tr("contact.form.service.enterprise")}
                       </option>
+                      <option value="digital">
+                        {tr("contact.form.service.digital")}
+                      </option>
                       <option value="other">
                         {tr("contact.form.service.other")}
                       </option>

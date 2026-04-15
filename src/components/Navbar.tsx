@@ -51,6 +51,7 @@ export default function Navbar() {
     { label: tr("nav.individual"), href: "/services/individuel" },
     { label: tr("nav.group"), href: "/services/groupe" },
     { label: tr("nav.enterprise"), href: "/services/entreprise" },
+    { label: tr("nav.digital"), href: "/services/numerique" },
   ];
 
   return (

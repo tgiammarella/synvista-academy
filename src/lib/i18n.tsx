@@ -19,6 +19,7 @@ export const t: Translations = {
   "nav.individual": { fr: "Formation individuelle", en: "Individual Training" },
   "nav.group": { fr: "Formations de groupe", en: "Group Training" },
   "nav.enterprise": { fr: "Services entreprise", en: "Enterprise Services" },
+  "nav.digital": { fr: "Services numériques", en: "Digital Services" },
   "nav.formation": { fr: "Formation", en: "Training" },
 
   // Hero
@@ -31,8 +32,8 @@ export const t: Translations = {
     en: "Master artificial intelligence to transform your life and your business",
   },
   "hero.subtitle": {
-    fr: "Formations personnalisées, ateliers de groupe et solutions sur mesure pour entrepreneurs et entreprises au Québec.",
-    en: "Personalized training, group workshops, and custom solutions for entrepreneurs and businesses in Quebec.",
+    fr: "Formations personnalisées, services numériques et solutions IA sur mesure pour entrepreneurs et entreprises au Québec.",
+    en: "Personalized training, digital services, and custom AI solutions for entrepreneurs and businesses in Quebec.",
   },
   "hero.cta_primary": {
     fr: "Découvrir nos services",
@@ -211,6 +212,7 @@ export const t: Translations = {
   "contact.form.service.individual": { fr: "Formation individuelle", en: "Individual Training" },
   "contact.form.service.group": { fr: "Formation de groupe", en: "Group Training" },
   "contact.form.service.enterprise": { fr: "Services entreprise", en: "Enterprise Services" },
+  "contact.form.service.digital": { fr: "Services numériques", en: "Digital Services" },
   "contact.form.service.other": { fr: "Autre", en: "Other" },
   "contact.form.message": { fr: "Votre message", en: "Your message" },
   "contact.form.submit": { fr: "Envoyer le message", en: "Send message" },
@@ -368,6 +370,58 @@ export const t: Translations = {
     en: "Process audit, automation opportunity identification, and concrete action plan.",
   },
   "funnel.enterprise.stack.title": { fr: "Notre stack technologique", en: "Our technology stack" },
+
+  // Digital services funnel
+  "funnel.digital.hero.title": {
+    fr: "Services numériques & création digitale",
+    en: "Digital Services & Creation",
+  },
+  "funnel.digital.hero.subtitle": {
+    fr: "Sites web professionnels, applications sur mesure, audit d'automatisation, SEO et contenu pour réseaux sociaux. On construit votre présence digitale avec l'IA.",
+    en: "Professional websites, custom apps, automation audits, SEO, and social media content. We build your digital presence with AI.",
+  },
+  "funnel.digital.services.title": { fr: "Ce qu'on fait pour vous", en: "What we do for you" },
+  "funnel.digital.services.item1.title": { fr: "Création de sites web", en: "Website Creation" },
+  "funnel.digital.services.item1.desc": {
+    fr: "Sites professionnels modernes, rapides et optimisés pour la conversion. Construit avec Next.js et Vercel pour des performances maximales et une expérience utilisateur irréprochable.",
+    en: "Modern, fast, conversion-optimized professional websites. Built with Next.js and Vercel for maximum performance and a flawless user experience.",
+  },
+  "funnel.digital.services.item2.title": { fr: "Développement d'applications", en: "App Development" },
+  "funnel.digital.services.item2.desc": {
+    fr: "Applications web et SaaS sur mesure pour votre entreprise. De l'idée au produit fini, on prend en charge la conception, le développement et le déploiement.",
+    en: "Custom web and SaaS applications for your business. From idea to finished product, we handle design, development, and deployment.",
+  },
+  "funnel.digital.services.item3.title": { fr: "Audit d'automatisation", en: "Automation Audit" },
+  "funnel.digital.services.item3.desc": {
+    fr: "On analyse vos processus et identifie les tâches automatisables. Vous recevez un rapport détaillé avec un plan d'action concret pour économiser des heures chaque semaine.",
+    en: "We analyze your processes and identify what can be automated. You get a detailed report with a concrete action plan to save hours every week.",
+  },
+  "funnel.digital.services.item4.title": { fr: "Contenu réseaux sociaux", en: "Social Media Content" },
+  "funnel.digital.services.item4.desc": {
+    fr: "Stratégie et création de contenu pour LinkedIn, Instagram et Facebook. Calendriers éditoriaux, visuels et textes générés avec l'IA pour maintenir une présence constante et cohérente.",
+    en: "Strategy and content creation for LinkedIn, Instagram, and Facebook. Editorial calendars, visuals, and AI-generated copy to maintain a consistent, on-brand presence.",
+  },
+  "funnel.digital.services.item5.title": { fr: "Optimisation SEO", en: "SEO Optimization" },
+  "funnel.digital.services.item5.desc": {
+    fr: "Audit SEO complet, optimisation technique et création de contenu pour améliorer votre visibilité sur Google. Des résultats mesurables, pas du jargon.",
+    en: "Full SEO audit, technical optimization, and content creation to improve your Google visibility. Measurable results, not jargon.",
+  },
+  "funnel.digital.how.title": { fr: "Comment ça fonctionne", en: "How it works" },
+  "funnel.digital.how.step1.title": { fr: "Appel découverte gratuit", en: "Free discovery call" },
+  "funnel.digital.how.step1.desc": {
+    fr: "On discute de votre projet, vos objectifs et votre budget pour trouver la meilleure approche ensemble.",
+    en: "We discuss your project, goals, and budget to find the best approach together.",
+  },
+  "funnel.digital.how.step2.title": { fr: "Proposition & plan", en: "Proposal & plan" },
+  "funnel.digital.how.step2.desc": {
+    fr: "Vous recevez une proposition claire avec le périmètre, le calendrier et les livrables attendus.",
+    en: "You receive a clear proposal with scope, timeline, and expected deliverables.",
+  },
+  "funnel.digital.how.step3.title": { fr: "Exécution & livraison", en: "Execution & delivery" },
+  "funnel.digital.how.step3.desc": {
+    fr: "On réalise le projet et vous livrons un produit fini, documenté et prêt à l'emploi. Suivi inclus.",
+    en: "We execute the project and deliver a finished, documented, ready-to-use product. Follow-up included.",
+  },
 };
 
 interface I18nContextType {
