@@ -86,12 +86,46 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 
 /* ─── pricing CTA buttons (single payment + 3-payment plan) ─── */
 
+/* Hero CTA — primary button only, no payment plan */
+function HeroCta({ l }: { l: (fr: string, en: string) => string }) {
+  const [showMessage, setShowMessage] = useState(false);
+
+  return (
+    <div className="flex flex-col items-center gap-3">
+      <button
+        type="button"
+        onClick={() => setShowMessage(true)}
+        className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-10 py-5 text-lg font-semibold text-white shadow-lg shadow-primary/25 transition-all duration-300 hover:bg-primary-light hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
+      >
+        <span className="relative z-10">
+          {l("Réserver ma place — 397$", "Reserve my spot — $397")}
+        </span>
+        <ArrowRight className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+      </button>
+      <AnimatePresence>
+        {showMessage && (
+          <motion.p
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="text-sm font-medium text-primary-light"
+          >
+            {l("Inscriptions bientôt ouvertes", "Registration opening soon")}
+          </motion.p>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+/* Pricing CTA — primary button + 3-payment plan link (used in pricing section & final CTA) */
 function PricingButton({ l }: { l: (fr: string, en: string) => string }) {
   const [showMessage, setShowMessage] = useState(false);
 
   return (
     <div className="flex flex-col items-center gap-6">
-      {/* Primary: full payment */}
       <div className="flex flex-col items-center gap-3">
         <button
           type="button"
@@ -367,7 +401,7 @@ export default function AutonomieIAPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              <PricingButton l={l} />
+              <HeroCta l={l} />
             </motion.div>
           </div>
 
