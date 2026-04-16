@@ -84,37 +84,52 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-/* ─── pricing CTA button (single payment) ─── */
+/* ─── pricing CTA buttons (single payment + 3-payment plan) ─── */
 
 function PricingButton({ l }: { l: (fr: string, en: string) => string }) {
   const [showMessage, setShowMessage] = useState(false);
 
   return (
-    <div className="flex flex-col items-center gap-3">
+    <div className="flex flex-col items-center gap-6">
+      {/* Primary: full payment */}
+      <div className="flex flex-col items-center gap-3">
+        <button
+          type="button"
+          onClick={() => setShowMessage(true)}
+          className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-10 py-5 text-lg font-semibold text-white shadow-lg shadow-primary/25 transition-all duration-300 hover:bg-primary-light hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
+        >
+          <span className="relative z-10">
+            {l("Réserver ma place — 397$", "Reserve my spot — $397")}
+          </span>
+          <ArrowRight className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+        </button>
+        <AnimatePresence>
+          {showMessage && (
+            <motion.p
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="text-sm font-medium text-primary-light"
+            >
+              {l("Inscriptions bientôt ouvertes", "Registration opening soon")}
+            </motion.p>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Secondary: 3-payment plan */}
       <button
         type="button"
         onClick={() => setShowMessage(true)}
-        className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-10 py-5 text-lg font-semibold text-white shadow-lg shadow-primary/25 transition-all duration-300 hover:bg-primary-light hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
+        className="text-sm font-medium text-white/40 underline underline-offset-4 transition-colors hover:text-white/70"
       >
-        <span className="relative z-10">
-          {l("Réserver ma place — 397$", "Reserve my spot — $397")}
-        </span>
-        <ArrowRight className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-      </button>
-      <AnimatePresence>
-        {showMessage && (
-          <motion.p
-            initial={{ opacity: 0, y: -4 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="text-sm font-medium text-primary-light"
-          >
-            {l("Inscriptions bientôt ouvertes", "Registration opening soon")}
-          </motion.p>
+        {l(
+          "ou 3 versements de 139$ (417$ au total)",
+          "or 3 payments of $139 ($417 total)"
         )}
-      </AnimatePresence>
+      </button>
     </div>
   );
 }
@@ -184,7 +199,7 @@ export default function AutonomieIAPage() {
     },
     {
       icon: PlayCircle,
-      title: l("Replays de toutes les sessions", "Replays of all sessions"),
+      title: l("Rediffusions de toutes les sessions", "Replays of all sessions"),
       desc: l(
         "Vous manquez une session? Vous voulez revoir une démo? Tout est archivé.",
         "Miss a session? Want to rewatch a demo? Everything is archived."
@@ -707,16 +722,27 @@ export default function AutonomieIAPage() {
               </motion.h2>
 
               <motion.div variants={fadeUp} custom={2} className="mt-14">
-                <div className="inline-block rounded-2xl border border-primary/30 bg-primary/10 px-12 py-8 text-center">
-                  <span className="block text-5xl font-bold text-white">
-                    397$
-                  </span>
-                  <span className="mt-2 block text-sm font-semibold text-primary-light">
-                    {l("CAD — Paiement unique", "CAD — One-time payment")}
-                  </span>
-                  <span className="mt-1 block text-sm text-white/50">
-                    {l("Accès à vie aux matériaux", "Lifetime access to all materials")}
-                  </span>
+                <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+                  {/* Full payment */}
+                  <div className="flex-1 rounded-2xl border border-primary/30 bg-primary/10 px-8 py-7 text-center sm:max-w-[220px]">
+                    <span className="block text-4xl font-bold text-white">397$</span>
+                    <span className="mt-2 block text-sm font-semibold text-primary-light">
+                      {l("CAD — Paiement unique", "CAD — One-time payment")}
+                    </span>
+                    <span className="mt-1 block text-xs text-white/40">
+                      {l("Accès à vie aux matériaux", "Lifetime access to all materials")}
+                    </span>
+                  </div>
+                  {/* 3-payment plan */}
+                  <div className="flex-1 rounded-2xl border border-white/10 bg-card px-8 py-7 text-center sm:max-w-[220px]">
+                    <span className="block text-4xl font-bold text-white">3 × 139$</span>
+                    <span className="mt-2 block text-sm font-semibold text-white/50">
+                      {l("3 versements mensuels", "3 monthly payments")}
+                    </span>
+                    <span className="mt-1 block text-xs text-white/30">
+                      {l("Total : 417$ CAD", "Total: $417 CAD")}
+                    </span>
+                  </div>
                 </div>
 
                 <p className="mt-8 text-sm font-medium text-primary-light/70">
