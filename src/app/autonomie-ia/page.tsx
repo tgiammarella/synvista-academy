@@ -854,7 +854,7 @@ export default function AutonomieIAPage() {
                 <div className="relative">
                   <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                     {l(
-                      "Prête à automatiser votre business\u00A0?",
+                      "Prête à automatiser votre entreprise\u00A0?",
                       "Ready to automate your business?"
                     )}
                   </h2>
