@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useI18n } from "@/lib/i18n";
 import LanguageToggle from "@/components/ui/LanguageToggle";
 import { motion, AnimatePresence } from "framer-motion";
@@ -16,9 +15,6 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const pathname = usePathname();
-
-  const formationHref = pathname === "/" ? "#formation" : "/autonomie-ia";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -49,9 +45,8 @@ export default function Navbar() {
 
   const subServices = [
     { label: tr("nav.individual"), href: "/services/individuel" },
-    { label: tr("nav.group"), href: "/services/groupe" },
+    { label: tr("nav.group"), href: "/autonomie-ia" },
     { label: tr("nav.enterprise"), href: "/services/entreprise" },
-    { label: tr("nav.digital"), href: "/services/numerique" },
   ];
 
   return (
@@ -123,14 +118,6 @@ export default function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
-
-              {/* Formation */}
-              <Link
-                href={formationHref}
-                className="rounded-lg px-4 py-2 text-sm font-medium text-white/80 transition-all duration-300 hover:bg-white/5 hover:text-white"
-              >
-                {tr("nav.formation")}
-              </Link>
 
               {/* About */}
               <a
@@ -248,15 +235,6 @@ export default function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
-
-              {/* Formation */}
-              <Link
-                href={formationHref}
-                onClick={() => setMobileOpen(false)}
-                className="w-full max-w-sm rounded-xl px-6 py-4 text-center text-xl font-medium text-white transition-colors hover:bg-white/5"
-              >
-                {tr("nav.formation")}
-              </Link>
 
               {/* About */}
               <a
