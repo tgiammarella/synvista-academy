@@ -332,44 +332,6 @@ export default function Contact() {
               return content;
             })}
 
-            {/* Decorative map placeholder */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-              custom={7}
-              variants={fadeInUp}
-              className="relative flex-1 min-h-[160px] rounded-2xl overflow-hidden"
-              style={{
-                background: "rgba(30, 41, 59, 0.5)",
-                border: "1px solid rgba(90, 138, 154, 0.12)",
-              }}
-            >
-              {/* Stylized map pattern */}
-              <div className="absolute inset-0 opacity-[0.06]">
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundImage: `
-                      linear-gradient(rgba(90,138,154,0.5) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(90,138,154,0.5) 1px, transparent 1px)
-                    `,
-                    backgroundSize: "40px 40px",
-                  }}
-                />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div
-                    className="w-4 h-4 rounded-full mx-auto mb-2 animate-pulse"
-                    style={{ background: "#5A8A9A" }}
-                  />
-                  <p className="text-xs text-slate-500 font-medium tracking-wide uppercase">
-                    Montréal, QC
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </div>
