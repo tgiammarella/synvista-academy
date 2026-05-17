@@ -13,207 +13,289 @@ type Translations = {
 
 export const t: Translations = {
   // Nav
-  "nav.services": { fr: "Services", en: "Services" },
+  "nav.academy": { fr: "Académie", en: "Academy" },
+  "nav.agency": { fr: "Agence", en: "Agency" },
   "nav.about": { fr: "À propos", en: "About" },
   "nav.contact": { fr: "Contact", en: "Contact" },
+  "nav.services": { fr: "Services", en: "Services" },
   "nav.individual": { fr: "Formation individuelle", en: "Individual Training" },
-  "nav.group": { fr: "Formations de groupe", en: "Group Training" },
+  "nav.group": { fr: "Formation de groupe", en: "Group Training" },
   "nav.enterprise": { fr: "Services entreprise", en: "Enterprise Services" },
   "nav.digital": { fr: "Services numériques", en: "Digital Services" },
   "nav.formation": { fr: "Formation", en: "Training" },
 
   // Hero
   "hero.tagline": {
-    fr: "Académie IA",
-    en: "AI Academy",
+    fr: "Académie IA + Agence IA",
+    en: "AI Academy + AI Agency",
   },
-  "hero.title": {
-    fr: "Maîtrisez l'intelligence artificielle pour transformer votre vie et votre entreprise",
-    en: "Master artificial intelligence to transform your life and your business",
+  "hero.title.line1": {
+    fr: "Maîtrisez l'IA avec Tina.",
+    en: "Master AI with Tina.",
+  },
+  "hero.title.line2.prefix": {
+    fr: "Ou laissez son ",
+    en: "Or let her ",
+  },
+  "hero.title.line2.accent": {
+    fr: "équipe",
+    en: "team",
+  },
+  "hero.title.line2.suffix": {
+    fr: " la déployer pour vous.",
+    en: " build it for you.",
   },
   "hero.subtitle": {
-    fr: "Formations personnalisées, services numériques et solutions IA sur mesure pour entrepreneurs et entreprises au Québec.",
-    en: "Personalized training, digital services, and custom AI solutions for entrepreneurs and businesses in Quebec.",
+    fr: "Deux parcours, une seule équipe de confiance. Formez-vous avec Tina à l'Académie Synvista, ou confiez vos projets d'automatisation, de SaaS et d'intégration IA à son équipe à l'Agence Synvista.",
+    en: "Two paths, one trusted team. Train with Tina at Synvista Academy, or hand off your automation, SaaS, and AI integration projects to her team at Synvista Agency.",
   },
   "hero.cta_primary": {
-    fr: "Découvrir nos services",
-    en: "Discover our services",
+    fr: "Explorer l'Académie",
+    en: "Explore the Academy",
   },
   "hero.cta_secondary": {
-    fr: "Nous contacter",
-    en: "Contact us",
+    fr: "Découvrir l'Agence",
+    en: "See the Agency",
   },
 
-  // Services section
-  "services.tagline": { fr: "Nos services", en: "Our Services" },
-  "services.title": {
-    fr: "Une approche adaptée à vos besoins",
-    en: "An approach tailored to your needs",
+  // Two doors
+  "doors.academy.label": { fr: "Pour apprendre", en: "To learn" },
+  "doors.academy.title": { fr: "Académie Synvista", en: "Synvista Academy" },
+  "doors.academy.desc": {
+    fr: "Tina vous forme directement. Sessions individuelles ou ateliers de groupe, en français ou en anglais, pour bâtir vos compétences en IA.",
+    en: "Tina trains you directly. One-on-one sessions or group workshops, in French or English, to build your AI skills.",
   },
-  "services.subtitle": {
-    fr: "Que vous soyez un particulier curieux, un entrepreneur ambitieux ou une entreprise en croissance, nous avons la solution IA qui vous convient.",
-    en: "Whether you're a curious individual, an ambitious entrepreneur, or a growing business, we have the AI solution for you.",
+  "doors.academy.cta": { fr: "Voir les formations", en: "See the trainings" },
+  "doors.agency.label": { fr: "Pour livrer", en: "To deliver" },
+  "doors.agency.title": { fr: "Agence Synvista", en: "Synvista Agency" },
+  "doors.agency.desc": {
+    fr: "L'équipe de Tina prend en charge votre projet. Automatisations, SaaS sur mesure, intégrations IA et services numériques, supervisés par Tina.",
+    en: "Tina's team takes on your project. Automations, custom SaaS, AI integrations and digital services, all supervised by Tina.",
+  },
+  "doors.agency.cta": { fr: "Voir les services", en: "See the services" },
+
+  // Academy section
+  "academy.tagline": { fr: "Académie Synvista", en: "Synvista Academy" },
+  "academy.title": {
+    fr: "Apprenez l'IA directement avec Tina",
+    en: "Learn AI directly from Tina",
+  },
+  "academy.subtitle": {
+    fr: "Formations conçues pour les entrepreneurs et équipes du Québec. Tina anime chaque session elle-même. Pas de plateforme préenregistrée, pas d'assistant. Vous apprenez avec la personne qui construit, automatise et déploie l'IA chaque jour.",
+    en: "Trainings built for Quebec entrepreneurs and teams. Tina runs every session herself. No pre-recorded platform, no assistant. You learn from the person who builds, automates, and deploys AI every day.",
   },
 
-  // Service 1 - Individual
-  "service.individual.title": {
+  // Academy - Individual
+  "academy.individual.title": {
     fr: "Formation individuelle",
-    en: "Individual Training",
+    en: "Individual training",
   },
-  "service.individual.desc": {
-    fr: "Apprenez l'IA à votre rythme avec un accompagnement personnalisé. Pour usage personnel ou professionnel.",
-    en: "Learn AI at your own pace with personalized guidance. For personal or professional use.",
+  "academy.individual.desc": {
+    fr: "Coaching IA un-à-un avec Tina. Programme bâti sur vos objectifs personnels ou professionnels.",
+    en: "One-on-one AI coaching with Tina. Program built around your personal or professional goals.",
   },
-  "service.individual.feature1": {
-    fr: "Sessions 1-à-1 en visioconférence",
-    en: "1-on-1 video sessions",
+  "academy.individual.feature1": {
+    fr: "Sessions en visioconférence",
+    en: "Video call sessions",
   },
-  "service.individual.feature2": {
+  "academy.individual.feature2": {
     fr: "Programme adapté à votre niveau",
     en: "Program adapted to your level",
   },
-  "service.individual.feature3": {
+  "academy.individual.feature3": {
     fr: "Outils IA pratiques et concrets",
     en: "Practical, hands-on AI tools",
   },
-  "service.individual.feature4": {
+  "academy.individual.feature4": {
     fr: "Suivi personnalisé entre les sessions",
-    en: "Personalized follow-up between sessions",
+    en: "Personal follow-up between sessions",
   },
-  "service.individual.cta": { fr: "En savoir plus", en: "Learn more" },
+  "academy.individual.feature5": {
+    fr: "Disponible en français ou en anglais",
+    en: "Available in French or English",
+  },
+  "academy.individual.cta": { fr: "En savoir plus", en: "Learn more" },
 
-  // Service 2 - Group
-  "service.group.title": {
-    fr: "Formations de groupe",
-    en: "Group Training",
+  // Academy - Group
+  "academy.group.title": {
+    fr: "Formation de groupe",
+    en: "Group training",
   },
-  "service.group.desc": {
-    fr: "Webinaires et ateliers interactifs pour équipes et communautés. Apprenez ensemble, progressez ensemble.",
-    en: "Interactive webinars and workshops for teams and communities. Learn together, grow together.",
+  "academy.group.desc": {
+    fr: "Webinaires, ateliers et formations sur mesure pour équipes, associations et communautés d'affaires.",
+    en: "Webinars, workshops and custom trainings for teams, associations and business communities.",
   },
-  "service.group.feature1": {
+  "academy.group.feature1": {
     fr: "Webinaires en direct",
     en: "Live webinars",
   },
-  "service.group.feature2": {
+  "academy.group.feature2": {
     fr: "Ateliers pratiques interactifs",
     en: "Interactive hands-on workshops",
   },
-  "service.group.feature3": {
-    fr: "Contenu bilingue (FR/EN)",
-    en: "Bilingual content (FR/EN)",
+  "academy.group.feature3": {
+    fr: "Contenu bilingue FR/EN",
+    en: "Bilingual content FR/EN",
   },
-  "service.group.feature4": {
+  "academy.group.feature4": {
     fr: "Accès aux rediffusions",
-    en: "Access to replays",
+    en: "Replay access included",
   },
-  "service.group.cta": { fr: "En savoir plus", en: "Learn more" },
+  "academy.group.feature5": {
+    fr: "Programmes sur mesure pour entreprises",
+    en: "Custom programs for companies",
+  },
+  "academy.group.cta": { fr: "En savoir plus", en: "Learn more" },
 
-  // Service 3 - Enterprise
-  "service.enterprise.title": {
-    fr: "Services entreprise",
-    en: "Enterprise Services",
+  // Tina Spotlight (About)
+  "about.tagline": { fr: "Derrière Synvista", en: "Behind Synvista" },
+  "about.name": { fr: "Tina Giammarella", en: "Tina Giammarella" },
+  "about.role": {
+    fr: "Développeure full-stack · Formatrice IA",
+    en: "Full-Stack Developer · AI Trainer",
   },
-  "service.enterprise.desc": {
-    fr: "Automatisation de tâches, création de SaaS et micro-SaaS sur mesure. Transformez votre entreprise avec l'IA.",
-    en: "Task automation, custom SaaS and micro-SaaS development. Transform your business with AI.",
+  "about.bio1": {
+    fr: "Tina est avant tout une développeure full-stack qui bâtit elle-même des systèmes d'automatisation, des applications sur mesure et des intégrations IA. C'est cette pratique quotidienne, du code à la livraison, qui nourrit ce qu'elle enseigne. Ses formations ne viennent pas de la théorie, elles viennent de ce qu'elle construit chaque semaine.",
+    en: "Tina is first and foremost a full-stack developer who personally builds automation systems, custom applications and AI integrations. It's this hands-on practice, from code to delivery, that fuels what she teaches. Her trainings don't come from theory, they come from what she ships every week.",
   },
-  "service.enterprise.feature1": {
+  "about.bio2": {
+    fr: "À l'Académie Synvista, elle transmet ce qu'elle bâtit. À l'Agence Synvista, elle reste impliquée personnellement dans la conception et l'architecture de chaque projet, avec une équipe qui prolonge sa capacité de livraison sur les mandats plus larges. Vous ne vous formez pas avec quelqu'un qui ne livre jamais, et vous ne confiez pas vos projets à une équipe coupée de la personne qui enseigne.",
+    en: "At Synvista Academy, she teaches what she builds. At Synvista Agency, she stays personally involved in the design and architecture of every project, with a team that extends her delivery capacity on larger mandates. You're not learning from someone who never ships, and you're not handing your project to a team disconnected from the person who teaches it.",
+  },
+  "about.pillar1.label": {
+    fr: "Bâtisseure + Formatrice",
+    en: "Builder + Trainer",
+  },
+  "about.pillar1.sub": { fr: "Agence + Académie", en: "Agency + Academy" },
+  "about.pillar2.label": { fr: "Basée au Québec", en: "Based in Quebec" },
+  "about.pillar2.sub": { fr: "Montréal", en: "Montreal" },
+  "about.pillar3.label": { fr: "Bilingue", en: "Bilingual" },
+  "about.pillar3.sub": { fr: "FR · EN", en: "FR · EN" },
+
+  // Agency section
+  "agency.tagline": { fr: "Agence Synvista", en: "Synvista Agency" },
+  "agency.title": {
+    fr: "Quand vous voulez le résultat, pas l'apprentissage",
+    en: "When you want the result, not the lesson",
+  },
+  "agency.subtitle": {
+    fr: "Notre équipe livre vos systèmes d'automatisation, applications SaaS, intégrations IA et services numériques. Tina supervise chaque projet personnellement, du devis à la livraison.",
+    en: "Our team builds and ships your automation systems, SaaS apps, AI integrations and digital services. Tina personally oversees every project, from quote to delivery.",
+  },
+  "agency.card1.title": {
     fr: "Automatisation des processus",
     en: "Process automation",
   },
-  "service.enterprise.feature2": {
-    fr: "Développement SaaS sur mesure",
-    en: "Custom SaaS development",
+  "agency.card1.desc": {
+    fr: "Workflows IA, intégrations no-code, automatisations Shopify, QuickBooks, Gmail et plus.",
+    en: "AI workflows, no-code integrations, automations for Shopify, QuickBooks, Gmail and more.",
   },
-  "service.enterprise.feature3": {
+  "agency.card2.title": {
+    fr: "SaaS et applications sur mesure",
+    en: "Custom SaaS and apps",
+  },
+  "agency.card2.desc": {
+    fr: "Conception et développement d'applications web et mobiles propulsées par l'IA, du MVP à la production.",
+    en: "Design and build of AI-powered web and mobile apps, from MVP to production.",
+  },
+  "agency.card3.title": {
     fr: "Intégrations IA personnalisées",
     en: "Custom AI integrations",
   },
-  "service.enterprise.feature4": {
-    fr: "Consultation et stratégie",
-    en: "Consultation and strategy",
+  "agency.card3.desc": {
+    fr: "Chatbots, assistants internes, agents Claude et ChatGPT branchés directement à vos outils existants.",
+    en: "Chatbots, internal assistants, Claude and ChatGPT agents plugged directly into your existing tools.",
   },
-  "service.enterprise.cta": { fr: "En savoir plus", en: "Learn more" },
+  "agency.card4.title": {
+    fr: "Sites web et services numériques",
+    en: "Websites and digital services",
+  },
+  "agency.card4.desc": {
+    fr: "Sites web professionnels, SEO, stratégie de contenu et planification de médias sociaux.",
+    en: "Professional websites, SEO, content strategy and social media planning.",
+  },
+  "agency.note.title": {
+    fr: "Une équipe, supervisée par Tina",
+    en: "A team, overseen by Tina",
+  },
+  "agency.note.desc": {
+    fr: "L'Agence Synvista regroupe développeurs, designers et spécialistes en automatisation. Vous bénéficiez de la capacité d'une équipe avec la rigueur d'un suivi personnel par Tina.",
+    en: "Synvista Agency brings together developers, designers and automation specialists. You get the capacity of a team with the rigor of personal oversight from Tina.",
+  },
 
-  // Service 4 - Digital Services
-  "service.digital.title": {
-    fr: "Services num\u00e9riques",
-    en: "Digital Services",
+  // Bridge
+  "bridge.title": {
+    fr: "La plupart de nos clients commencent par une formation. Et finissent par construire.",
+    en: "Most of our clients start with training. And end up building.",
   },
-  "service.digital.desc": {
-    fr: "Cr\u00e9ation de sites web, d\u00e9veloppement d'applications, SEO et planification de m\u00e9dias sociaux. On le fait pour vous, ou on vous montre comment.",
-    en: "Website creation, app development, SEO, and social media planning. We do it for you, or we teach you how.",
+  "bridge.subtitle": {
+    fr: "Vous n'avez pas à choisir aujourd'hui. Apprenez d'abord, déléguez ensuite. Ou l'inverse. L'important, c'est d'avancer.",
+    en: "You don't have to choose today. Learn first, delegate later. Or the other way around. What matters is moving forward.",
   },
-  "service.digital.feature1": {
-    fr: "Cr\u00e9ation de sites web professionnels",
-    en: "Professional website creation",
-  },
-  "service.digital.feature2": {
-    fr: "D\u00e9veloppement d'applications sur mesure",
-    en: "Custom app development",
-  },
-  "service.digital.feature3": {
-    fr: "Optimisation SEO et visibilit\u00e9 en ligne",
-    en: "SEO optimization and online visibility",
-  },
-  "service.digital.feature4": {
-    fr: "Strat\u00e9gie et planification m\u00e9dias sociaux",
-    en: "Social media strategy and planning",
-  },
-  "service.digital.cta": { fr: "En savoir plus", en: "Learn more" },
 
-  // About section
-  "about.tagline": { fr: "À propos", en: "About" },
-  "about.title": {
-    fr: "Votre formatrice IA",
-    en: "Your AI trainer",
+  // Process
+  "process.tagline": { fr: "Le processus", en: "The process" },
+  "process.title": {
+    fr: "Trois étapes, sans engagement initial",
+    en: "Three steps, no upfront commitment",
   },
-  "about.name": {
-    fr: "Tina Giammarella",
-    en: "Tina Giammarella",
+  "process.subtitle": {
+    fr: "On commence par une simple conversation. Vous décidez ensuite de la suite.",
+    en: "We start with a simple conversation. You decide what comes next.",
   },
-  "about.role": {
-    fr: "Fondatrice et Formatrice IA",
-    en: "Founder & AI Trainer",
+  "process.step1.title": { fr: "Vous nous écrivez", en: "You reach out" },
+  "process.step1.desc": {
+    fr: "Remplissez le formulaire ou envoyez un courriel. Pas besoin de prendre rendez-vous en ligne.",
+    en: "Fill the form or send an email. No need to book a slot online.",
   },
-  "about.bio1": {
-    fr: "Entrepreneure passionnée et développeuse full-stack, Tina combine plus de 18 ans d'expérience professionnelle avec une maîtrise approfondie de l'intelligence artificielle et du développement technologique. Elle est également fondatrice de Les Gâteries Yakety Yaks Chews, une marque premium de gâteries pour chiens au Québec, une expérience qui lui donne une compréhension concrète des réalités du commerce, de la gestion d'entreprise et de la croissance entrepreneuriale.",
-    en: "A passionate entrepreneur and full-stack developer, Tina combines over 18 years of professional experience with deep mastery of artificial intelligence and technology development. She is also the founder of Les Gâteries Yakety Yaks Chews, a premium dog treat brand in Quebec, an experience that gives her a concrete understanding of commerce, business management, and entrepreneurial growth.",
+  "process.step2.title": { fr: "On en discute", en: "We talk it through" },
+  "process.step2.desc": {
+    fr: "Courte conversation pour comprendre votre besoin. Tina vous oriente vers l'Académie ou l'Agence.",
+    en: "Short call to understand your need. Tina points you toward Academy or Agency.",
   },
-  "about.bio2": {
-    fr: "Elle construit activement plusieurs plateformes technologiques, dont ToutToilettage, un marché de toilettage bilingue, ainsi que des applications SaaS de productivité et de gestion. Tina apporte une approche unique qui allie vision stratégique, compétences techniques concrètes et expérience terrain en gestion d'entreprise.",
-    en: "She is actively building multiple technology platforms, including ToutToilettage, a bilingual grooming marketplace, as well as productivity and management SaaS applications. Tina brings a unique approach that combines strategic vision, hands-on technical skills, and real-world business management experience.",
+  "process.step3.title": { fr: "On avance", en: "We move forward" },
+  "process.step3.desc": {
+    fr: "Vous apprenez, ou notre équipe livre. Avec la possibilité de combiner les deux quand ça a du sens.",
+    en: "You learn, or our team delivers. With the option to combine both when it makes sense.",
   },
-  "about.bio3": {
-    fr: "Parfaitement bilingue (français et anglais), Tina est passionnée par la démocratisation de l'IA et aide les entrepreneurs et les entreprises du Québec à exploiter pleinement le potentiel de ces technologies transformatrices.",
-    en: "Fully bilingual (French and English), Tina is passionate about democratizing AI and helping Quebec entrepreneurs and businesses fully harness the potential of these transformative technologies.",
-  },
-  "about.stat1.number": { fr: "18+", en: "18+" },
-  "about.stat1.label": { fr: "Années d'expérience", en: "Years of experience" },
-  "about.stat2.number": { fr: "4+", en: "4+" },
-  "about.stat2.label": { fr: "Plateformes en développement", en: "Platforms in development" },
-  "about.stat3.number": { fr: "100%", en: "100%" },
-  "about.stat3.label": { fr: "Bilingue FR/EN", en: "Bilingual FR/EN" },
 
   // Contact section
   "contact.tagline": { fr: "Contact", en: "Contact" },
   "contact.title": {
-    fr: "Prêt à maîtriser l'IA?",
-    en: "Ready to master AI?",
+    fr: "Prêt à maîtriser l'IA ou à la déployer dans votre entreprise?",
+    en: "Ready to master AI or deploy it in your business?",
   },
   "contact.subtitle": {
-    fr: "Que vous souhaitiez une formation personnalisée, organiser un atelier pour votre équipe ou développer une solution IA sur mesure, nous sommes là pour vous accompagner.",
-    en: "Whether you want personalized training, to organize a workshop for your team, or develop a custom AI solution, we're here to help.",
+    fr: "Écrivez-nous, et on revient vers vous rapidement. Aucune réunion forcée, aucun engagement.",
+    en: "Send us a message and we'll get back to you quickly. No forced meetings, no commitment.",
   },
   "contact.form.name": { fr: "Votre nom", en: "Your name" },
   "contact.form.email": { fr: "Votre courriel", en: "Your email" },
   "contact.form.service": { fr: "Service qui vous intéresse", en: "Service you're interested in" },
-  "contact.form.service.individual": { fr: "Formation individuelle", en: "Individual Training" },
-  "contact.form.service.group": { fr: "Formation de groupe", en: "Group Training" },
-  "contact.form.service.enterprise": { fr: "Services entreprise", en: "Enterprise Services" },
-  "contact.form.service.digital": { fr: "Services numériques", en: "Digital Services" },
-  "contact.form.service.other": { fr: "Autre", en: "Other" },
+  "contact.form.service.group.academy": { fr: "Académie", en: "Academy" },
+  "contact.form.service.group.agency": { fr: "Agence", en: "Agency" },
+  "contact.form.service.individual": { fr: "Formation individuelle", en: "Individual training" },
+  "contact.form.service.group": { fr: "Formation de groupe", en: "Group training" },
+  "contact.form.service.automation": {
+    fr: "Automatisation des processus",
+    en: "Process automation",
+  },
+  "contact.form.service.saas": {
+    fr: "SaaS et applications sur mesure",
+    en: "Custom SaaS and apps",
+  },
+  "contact.form.service.ai": {
+    fr: "Intégrations IA personnalisées",
+    en: "Custom AI integrations",
+  },
+  "contact.form.service.digital": {
+    fr: "Sites web et services numériques",
+    en: "Websites and digital services",
+  },
+  "contact.form.service.other": {
+    fr: "Autre / je ne sais pas encore",
+    en: "Other / not sure yet",
+  },
   "contact.form.message": { fr: "Votre message", en: "Your message" },
   "contact.form.submit": { fr: "Envoyer le message", en: "Send message" },
   "contact.form.success": { fr: "Message envoyé avec succès!", en: "Message sent successfully!" },
@@ -222,21 +304,27 @@ export const t: Translations = {
   "contact.info.location": { fr: "Localisation", en: "Location" },
 
   // Footer
+  "footer.tagline": {
+    fr: "Démocratiser l'IA pour les entrepreneurs et entreprises du Québec, par la formation et par la livraison.",
+    en: "Democratizing AI for Quebec entrepreneurs and businesses, through training and through delivery.",
+  },
+  "footer.col.academy": { fr: "Académie", en: "Academy" },
+  "footer.col.agency": { fr: "Agence", en: "Agency" },
+  "footer.col.contact": { fr: "Contact", en: "Contact" },
+  "footer.link.automation": { fr: "Automatisations", en: "Automations" },
+  "footer.link.saas": { fr: "SaaS sur mesure", en: "Custom SaaS" },
+  "footer.link.ai": { fr: "Intégrations IA", en: "AI integrations" },
+  "footer.link.websites": { fr: "Sites web", en: "Websites" },
   "footer.rights": {
     fr: "Tous droits réservés.",
     en: "All rights reserved.",
   },
-  "footer.tagline": {
-    fr: "Démocratiser l'IA pour les entrepreneurs du Québec.",
-    en: "Democratizing AI for Quebec entrepreneurs.",
-  },
 
-  // Funnel pages
+  // Funnel pages — preserved from previous version (used by /services/* pages)
   "funnel.back": { fr: "Retour à l'accueil", en: "Back to home" },
   "funnel.cta": { fr: "Nous contacter", en: "Contact us" },
   "funnel.ready": { fr: "Prêt à commencer?", en: "Ready to get started?" },
 
-  // Individual funnel
   "funnel.individual.hero.title": {
     fr: "Formation individuelle en IA",
     en: "Individual AI Training",
@@ -296,7 +384,6 @@ export const t: Translations = {
     en: "Support between sessions and complementary resources.",
   },
 
-  // Group funnel
   "funnel.group.hero.title": {
     fr: "Formations de groupe & webinaires",
     en: "Group Training & Webinars",
@@ -339,7 +426,6 @@ export const t: Translations = {
     en: "Content tailored to your industry and specific needs",
   },
 
-  // Enterprise funnel
   "funnel.enterprise.hero.title": {
     fr: "Services entreprise & entrepreneur",
     en: "Enterprise & Entrepreneur Services",
@@ -371,7 +457,6 @@ export const t: Translations = {
   },
   "funnel.enterprise.stack.title": { fr: "Notre stack technologique", en: "Our technology stack" },
 
-  // Digital services funnel
   "funnel.digital.hero.title": {
     fr: "Services numériques & création digitale",
     en: "Digital Services & Creation",

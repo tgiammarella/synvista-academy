@@ -22,8 +22,8 @@ const contactInfo = [
   {
     icon: Mail,
     labelKey: "contact.info.email",
-    value: "tgiammarella@gmail.com",
-    href: "mailto:tgiammarella@gmail.com",
+    value: "info@synvista.ai",
+    href: "mailto:info@synvista.ai",
   },
   {
     icon: Phone,
@@ -200,18 +200,28 @@ export default function Contact() {
                       <option value="" disabled>
                         {tr("contact.form.service")}
                       </option>
-                      <option value="individual">
-                        {tr("contact.form.service.individual")}
-                      </option>
-                      <option value="group">
-                        {tr("contact.form.service.group")}
-                      </option>
-                      <option value="enterprise">
-                        {tr("contact.form.service.enterprise")}
-                      </option>
-                      <option value="digital">
-                        {tr("contact.form.service.digital")}
-                      </option>
+                      <optgroup label={tr("contact.form.service.group.academy")}>
+                        <option value="individual">
+                          {tr("contact.form.service.individual")}
+                        </option>
+                        <option value="group">
+                          {tr("contact.form.service.group")}
+                        </option>
+                      </optgroup>
+                      <optgroup label={tr("contact.form.service.group.agency")}>
+                        <option value="automation">
+                          {tr("contact.form.service.automation")}
+                        </option>
+                        <option value="saas">
+                          {tr("contact.form.service.saas")}
+                        </option>
+                        <option value="ai">
+                          {tr("contact.form.service.ai")}
+                        </option>
+                        <option value="digital">
+                          {tr("contact.form.service.digital")}
+                        </option>
+                      </optgroup>
                       <option value="other">
                         {tr("contact.form.service.other")}
                       </option>

@@ -108,7 +108,13 @@ export default function Hero() {
               animate="visible"
               custom={0.15}
             >
-              {tr("hero.title")}
+              {tr("hero.title.line1")}
+              <br />
+              {tr("hero.title.line2.prefix")}
+              <span className="italic bg-gradient-to-r from-[#7AB8C9] to-[#5A8A9A] bg-clip-text text-transparent">
+                {tr("hero.title.line2.accent")}
+              </span>
+              {tr("hero.title.line2.suffix")}
             </motion.h1>
 
             {/* Subtitle */}
@@ -131,14 +137,14 @@ export default function Hero() {
               custom={0.45}
             >
               <Link
-                href="#services"
+                href="#academy"
                 className="group relative inline-flex h-13 items-center justify-center gap-2 overflow-hidden rounded-xl bg-[#5A8A9A] px-8 text-base font-semibold text-white shadow-lg shadow-[#5A8A9A]/25 transition-all duration-300 hover:bg-[#4A7A8A] hover:shadow-xl hover:shadow-[#5A8A9A]/30 hover:-translate-y-0.5"
               >
-                <span className="relative z-10">{tr("hero.cta_primary")}</span>
+                <span className="relative z-10">{tr("hero.cta_primary")} →</span>
                 <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               </Link>
               <Link
-                href="#contact"
+                href="#agency"
                 className="inline-flex h-13 items-center justify-center rounded-xl border border-slate-500/30 px-8 text-base font-semibold text-slate-200 backdrop-blur-sm transition-all duration-300 hover:border-[#5A8A9A]/50 hover:bg-white/5 hover:text-white hover:-translate-y-0.5"
               >
                 {tr("hero.cta_secondary")}

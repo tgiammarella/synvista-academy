@@ -3,24 +3,33 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
+import { GraduationCap, MapPin, Languages } from "lucide-react";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      delay: i * 0.15,
-      duration: 0.6,
-      ease: "easeOut" as const,
-    },
+    transition: { delay: i * 0.12, duration: 0.6, ease: "easeOut" as const },
   }),
 };
 
-const stats = [
-  { number: "about.stat1.number", label: "about.stat1.label" },
-  { number: "about.stat2.number", label: "about.stat2.label" },
-  { number: "about.stat3.number", label: "about.stat3.label" },
+const pillars = [
+  {
+    icon: GraduationCap,
+    labelKey: "about.pillar1.label",
+    subKey: "about.pillar1.sub",
+  },
+  {
+    icon: MapPin,
+    labelKey: "about.pillar2.label",
+    subKey: "about.pillar2.sub",
+  },
+  {
+    icon: Languages,
+    labelKey: "about.pillar3.label",
+    subKey: "about.pillar3.sub",
+  },
 ];
 
 export default function About() {
@@ -29,163 +38,129 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-24 md:py-32 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #0F172A 0%, #162033 50%, #0F172A 100%)" }}
+      className="relative overflow-hidden py-24 md:py-32"
+      style={{ background: "#162033" }}
     >
-      {/* Subtle background accent */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-[0.04] pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, #5A8A9A 0%, transparent 70%)",
-        }}
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.05]"
+        style={{ background: "radial-gradient(circle, #5A8A9A 0%, transparent 70%)" }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Two-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-          {/* Left column - Image */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            custom={0}
-            variants={fadeInUp}
-            className="flex justify-center lg:justify-end order-2 lg:order-1"
-          >
-            <div className="relative">
-              {/* Glow effect behind image */}
-              <div
-                className="absolute -inset-4 rounded-3xl opacity-40 blur-2xl"
-                style={{
-                  background: "linear-gradient(135deg, #5A8A9A 0%, #3d6b7a 100%)",
-                }}
-              />
-              {/* Teal border frame */}
-              <div
-                className="relative rounded-2xl p-[2px] overflow-hidden"
-                style={{
-                  background: "linear-gradient(135deg, #5A8A9A 0%, rgba(90,138,154,0.3) 50%, #5A8A9A 100%)",
-                }}
-              >
-                <div className="rounded-2xl overflow-hidden bg-[#0F172A]">
-                  <Image
-                    src="/images/ai-twin.png"
-                    alt={tr("about.name")}
-                    width={520}
-                    height={620}
-                    className="w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[520px] h-auto object-cover mx-auto"
-                    priority={false}
-                  />
-                </div>
-              </div>
-              {/* Decorative corner accents */}
-              <div
-                className="absolute -top-2 -left-2 w-16 h-16 border-t-2 border-l-2 rounded-tl-xl opacity-60"
-                style={{ borderColor: "#5A8A9A" }}
-              />
-              <div
-                className="absolute -bottom-2 -right-2 w-16 h-16 border-b-2 border-r-2 rounded-br-xl opacity-60"
-                style={{ borderColor: "#5A8A9A" }}
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-8">
+        <motion.span
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          custom={0}
+          className="text-xs font-bold uppercase tracking-[0.2em] text-[#7AB8C9]"
+        >
+          {tr("about.tagline")}
+        </motion.span>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          custom={1}
+          className="mt-6 flex justify-center"
+        >
+          <div className="relative">
+            <div
+              className="absolute -inset-3 rounded-full opacity-50 blur-2xl"
+              style={{
+                background: "linear-gradient(135deg, #5A8A9A 0%, #7AB8C9 100%)",
+              }}
+            />
+            <div className="relative h-32 w-32 overflow-hidden rounded-full ring-2 ring-[#5A8A9A]/40 sm:h-36 sm:w-36">
+              <Image
+                src="/images/ai-twin.png"
+                alt={tr("about.name")}
+                width={200}
+                height={200}
+                className="h-full w-full object-cover"
               />
             </div>
-          </motion.div>
+          </div>
+        </motion.div>
 
-          {/* Right column - Content */}
-          <div className="order-1 lg:order-2">
-            <motion.p
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              custom={0}
-              variants={fadeInUp}
-              className="text-sm font-semibold tracking-[0.2em] uppercase mb-4"
-              style={{ color: "#5A8A9A" }}
-            >
-              {tr("about.tagline")}
-            </motion.p>
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          custom={2}
+          className="mt-8 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
+        >
+          {tr("about.name")}
+        </motion.h2>
 
-            <motion.h2
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              custom={1}
-              variants={fadeInUp}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight"
-            >
-              {tr("about.name")}
-            </motion.h2>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          custom={3}
+          className="mt-3 text-sm font-semibold uppercase tracking-[0.15em] text-[#7AB8C9]"
+        >
+          {tr("about.role")}
+        </motion.p>
 
-            <motion.p
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              custom={2}
-              variants={fadeInUp}
-              className="text-lg font-medium mb-8"
-              style={{ color: "#5A8A9A" }}
-            >
-              {tr("about.role")}
-            </motion.p>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          custom={4}
+          className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-slate-300/85 sm:text-lg"
+        >
+          {tr("about.bio1")}
+        </motion.p>
 
-            {/* Bio paragraphs */}
-            {(["about.bio1", "about.bio2", "about.bio3"] as const).map((key, i) => (
-              <motion.p
-                key={key}
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          custom={5}
+          className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300/85 sm:text-lg"
+        >
+          {tr("about.bio2")}
+        </motion.p>
+
+        {/* Pillars */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          custom={6}
+          className="mx-auto mt-12 grid max-w-2xl gap-4 sm:grid-cols-3"
+        >
+          {pillars.map((pillar, i) => {
+            const Icon = pillar.icon;
+            return (
+              <motion.div
+                key={pillar.labelKey}
+                variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                custom={3 + i}
-                variants={fadeInUp}
-                className="text-base md:text-lg leading-relaxed text-slate-300/90 mb-5 last:mb-0"
+                viewport={{ once: true, margin: "-80px" }}
+                custom={7 + i}
+                className="rounded-2xl border border-white/10 bg-[#1E293B] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#5A8A9A]/40"
               >
-                {tr(key)}
-              </motion.p>
-            ))}
-
-            {/* Stats row */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              custom={6}
-              variants={fadeInUp}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10"
-            >
-              {stats.map((stat, i) => (
-                <motion.div
-                  key={stat.number}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-80px" }}
-                  custom={7 + i}
-                  variants={fadeInUp}
-                  className="relative group rounded-xl p-5 text-center transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    background: "rgba(30, 41, 59, 0.7)",
-                    border: "1px solid rgba(90, 138, 154, 0.2)",
-                  }}
-                >
-                  {/* Hover glow */}
-                  <div
-                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                    style={{
-                      background: "linear-gradient(135deg, rgba(90,138,154,0.1) 0%, transparent 100%)",
-                    }}
-                  />
-                  <p
-                    className="relative text-2xl md:text-3xl font-bold mb-1"
-                    style={{ color: "#5A8A9A" }}
-                  >
-                    {tr(stat.number)}
-                  </p>
-                  <p className="relative text-xs md:text-sm text-slate-400 leading-tight">
-                    {tr(stat.label)}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
+                <Icon className="mx-auto h-6 w-6 text-[#7AB8C9]" strokeWidth={1.75} />
+                <p className="mt-3 text-sm font-semibold text-white">
+                  {tr(pillar.labelKey)}
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-wider text-slate-400">
+                  {tr(pillar.subKey)}
+                </p>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );

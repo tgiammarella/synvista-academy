@@ -14,25 +14,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Synvista Académie IA | Formation et Services en Intelligence Artificielle",
+  title: "Synvista | Académie IA + Agence IA",
   description:
-    "Formations individuelles, ateliers de groupe et solutions IA sur mesure pour entrepreneurs et entreprises au Québec. Maîtrisez l'IA avec Synvista.",
+    "Deux parcours, une seule équipe. Formez-vous avec Tina à l'Académie Synvista, ou confiez vos projets d'automatisation, SaaS et IA à son équipe à l'Agence Synvista.",
   keywords: [
     "formation IA",
+    "agence IA",
     "intelligence artificielle",
     "Québec",
+    "Montréal",
     "ChatGPT",
+    "Claude",
     "automatisation",
-    "SaaS",
+    "SaaS sur mesure",
+    "intégration IA",
     "entrepreneur",
-    "AI training",
+    "AI academy",
+    "AI agency",
   ],
   openGraph: {
-    title: "Synvista Académie IA",
+    title: "Synvista | Académie IA + Agence IA",
     description:
-      "Maîtrisez l'intelligence artificielle pour transformer votre vie et votre entreprise.",
+      "Maîtrisez l'IA avec Tina. Ou laissez son équipe la déployer pour vous.",
     url: "https://www.synvista.ai",
-    siteName: "Synvista Académie IA",
+    siteName: "Synvista",
     locale: "fr_CA",
     type: "website",
   },
