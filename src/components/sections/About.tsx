@@ -75,10 +75,10 @@ export default function About() {
             />
             <div className="relative h-32 w-32 overflow-hidden rounded-full ring-2 ring-[#5A8A9A]/40 sm:h-36 sm:w-36">
               <Image
-                src="/images/ai-twin.png"
+                src="/images/tina-headshot.png"
                 alt={tr("about.name")}
-                width={200}
-                height={200}
+                width={400}
+                height={400}
                 className="h-full w-full object-cover"
               />
             </div>
