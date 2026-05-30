@@ -1,7 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async rewrites() {
+    return [
+      {
+        source: "/atelier-rosemere",
+        destination: "https://synvista-rosemere-29juin.vercel.app/",
+      },
+      {
+        source: "/atelier-rosemere/:path*",
+        destination: "https://synvista-rosemere-29juin.vercel.app/:path*",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
