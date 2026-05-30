@@ -26,8 +26,9 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  const navLinks = [
+ const navLinks = [
     { label: tr("nav.academy"), href: "/#academy" },
+    { label: "Ateliers", href: "/ateliers-en-personne" },
     { label: tr("nav.agency"), href: "/#agency" },
     { label: tr("nav.about"), href: "/#about" },
     { label: tr("nav.contact"), href: "/#contact" },
