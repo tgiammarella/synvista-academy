@@ -28,7 +28,7 @@ export default function Navbar() {
 
  const navLinks = [
     { label: tr("nav.academy"), href: "/#academy" },
-    { label: "Ateliers", href: "/ateliers-en-personne" },
+    { label: tr("nav.workshops"), href: `/ateliers-en-personne${locale === "en" ? "?lang=en" : ""}` },
     { label: tr("nav.agency"), href: "/#agency" },
     { label: tr("nav.about"), href: "/#about" },
     { label: tr("nav.contact"), href: "/#contact" },
