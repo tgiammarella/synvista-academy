@@ -23,6 +23,7 @@ export const t: Translations = {
   "nav.enterprise": { fr: "Services entreprise", en: "Enterprise Services" },
   "nav.digital": { fr: "Services numériques", en: "Digital Services" },
   "nav.formation": { fr: "Formation", en: "Training" },
+  "nav.workshops": { fr: "Ateliers", en: "Workshops" },
 
   // Hero
   "hero.tagline": {
