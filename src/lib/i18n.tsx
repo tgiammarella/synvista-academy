@@ -148,6 +148,21 @@ export const t: Translations = {
   },
   "academy.group.cta": { fr: "En savoir plus", en: "Learn more" },
 
+  // Neurodivergence callout
+  "neuro.eyebrow": { fr: "Nouveau · Bientôt", en: "New · Coming soon" },
+  "neuro.title": {
+    fr: "Tu es un cerveau neurodivergent en affaires?",
+    en: "Are you a neurodivergent brain running a business?",
+  },
+  "neuro.body": {
+    fr: "Une nouvelle offre pour les entrepreneurs TDAH et autistes qui ont mille idées et pas assez d'énergie pour toutes les exécuter. L'IA bâtie autour de ton cerveau, pas contre lui.",
+    en: "A new offer for ADHD and autistic entrepreneurs with a thousand ideas and not enough energy to ship them all. AI built around your brain, not against it.",
+  },
+  "neuro.cta": {
+    fr: "Avertis-moi quand ça ouvre",
+    en: "Notify me when it opens",
+  },
+
   // Tina Spotlight (About)
   "about.tagline": { fr: "Derrière Synvista", en: "Behind Synvista" },
   "about.name": { fr: "Tina Giammarella", en: "Tina Giammarella" },
