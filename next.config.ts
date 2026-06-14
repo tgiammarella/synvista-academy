@@ -19,6 +19,14 @@ const nextConfig: NextConfig = {
         source: "/ateliers-en-personne/:path*",
         destination: "https://synvista-ateliers.vercel.app/:path*",
       },
+      {
+        source: "/neurodivergence",
+        destination: "https://synvista-rosemere-29juin.vercel.app/neurodivergence/",
+      },
+      {
+        source: "/neurodivergence/:path*",
+        destination: "https://synvista-rosemere-29juin.vercel.app/neurodivergence/:path*",
+      },
     ];
   },
 };
