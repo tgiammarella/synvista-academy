@@ -6,7 +6,7 @@ import { useI18n } from "@/lib/i18n";
 import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
 export default function Footer() {
-  const { tr } = useI18n();
+  const { tr, locale } = useI18n();
 
   const academyLinks = [
     { label: tr("academy.individual.title"), href: "/services/individuel" },
@@ -55,11 +55,11 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/logo-white.png"
+                src={`/images/synvista-logo-white-${locale}.png`}
                 alt="Synvista — Académie + Agence IA"
-                width={140}
-                height={35}
-                className="h-auto w-[140px]"
+                width={846}
+                height={399}
+                className="h-auto w-[150px]"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/50">

@@ -48,12 +48,12 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="relative shrink-0">
               <Image
-                src="/images/logo-white.png"
+                src={`/images/synvista-logo-white-${locale}.png`}
                 alt="Synvista — Académie + Agence IA"
-                width={160}
-                height={40}
+                width={846}
+                height={399}
                 priority
-                className="h-auto w-[140px] sm:w-[160px]"
+                className="h-auto w-[150px] sm:w-[172px]"
               />
             </Link>
 

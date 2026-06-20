@@ -41,6 +41,16 @@ export const metadata: Metadata = {
     locale: "fr_CA",
     type: "website",
   },
+  icons: {
+    icon: [
+      { url: "/images/Favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/Favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/images/Favicon-180x180.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
