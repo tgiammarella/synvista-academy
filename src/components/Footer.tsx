@@ -23,13 +23,13 @@ export default function Footer() {
   const contactInfo = [
     {
       icon: Mail,
-      text: "info@synvista.ai",
-      href: "mailto:info@synvista.ai",
+      text: "tina@synvista.ai",
+      href: "mailto:tina@synvista.ai",
     },
     {
       icon: Phone,
-      text: "(514) 914-8721",
-      href: "tel:+15149148721",
+      text: "(514) 377-8721",
+      href: "tel:+15143778721",
     },
     {
       icon: MapPin,

@@ -22,14 +22,14 @@ const contactInfo = [
   {
     icon: Mail,
     labelKey: "contact.info.email",
-    value: "info@synvista.ai",
-    href: "mailto:info@synvista.ai",
+    value: "tina@synvista.ai",
+    href: "mailto:tina@synvista.ai",
   },
   {
     icon: Phone,
     labelKey: "contact.info.phone",
-    value: "(514) 914-8721",
-    href: "tel:+15149148721",
+    value: "(514) 377-8721",
+    href: "tel:+15143778721",
   },
   {
     icon: MapPin,
