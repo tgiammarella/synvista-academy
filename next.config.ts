@@ -1,14 +1,28 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async rewrites() {
+  async redirects() {
     return [
       {
         source: "/atelier-rosemere",
-        destination: "https://synvista-rosemere-29juin.vercel.app/",
+        destination: "/atelier-mascouche",
+        permanent: true,
       },
       {
         source: "/atelier-rosemere/:path*",
+        destination: "/atelier-mascouche",
+        permanent: true,
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/atelier-mascouche",
+        destination: "https://synvista-rosemere-29juin.vercel.app/",
+      },
+      {
+        source: "/atelier-mascouche/:path*",
         destination: "https://synvista-rosemere-29juin.vercel.app/:path*",
       },
       {
